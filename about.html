@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Rebahumi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>:root{--ink:#132420;--paper:#EEF0E8;--paper-dim:#E4E7DB;--card:#FBFBF7;--gold:#D98E04;--rust:#A94A34;--teal:#2F6F62;--wa:#1B7F4F;--line:#CCD1C0;--muted:#5B655C;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+.eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:900;line-height:1.08;letter-spacing:-.01em;}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 6vw;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:10;}
+.logo{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:1.3rem;text-decoration:none;}
+.logo span{color:var(--rust);}
+nav{display:flex;gap:1.6rem;}
+nav a{text-decoration:none;font-size:.92rem;font-weight:500;padding-bottom:2px;}
+nav a.on{border-bottom:2px solid var(--gold);}
+.pill{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.82rem;font-weight:600;background:var(--wa);color:#fff;padding:.5rem .9rem;border-radius:3px;text-decoration:none;white-space:nowrap;}
+@media(max-width:700px){.pill{display:none;}nav{gap:1.1rem;}header{padding:1rem 5vw;}}
+.wrap{max-width:1200px;margin:0 auto;padding:0 6vw;}
+.btn{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.85rem;font-weight:600;padding:.85rem 1.5rem;border-radius:3px;text-decoration:none;display:inline-block;transition:transform .15s ease;}
+.btn:hover{transform:translateY(-2px);}
+.btn-wa{background:var(--wa);color:#fff;}
+.btn-ghost{border:1px solid var(--ink);}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn[aria-disabled=true]{opacity:.55;pointer-events:none;}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+.wa-float{position:fixed;right:1rem;bottom:1rem;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 20px -6px rgba(19,36,32,.5);z-index:20;}
+.wa-float svg{width:30px;height:30px;}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;padding:5rem 0 4.5rem;align-items:center;}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:2.8rem 0;gap:2.5rem;}}
+.hero h1{font-size:clamp(2.3rem,5vw,3.6rem);margin:.6rem 0 1.1rem;}
+.hero h1 em{color:var(--gold);}
+.hero p.lead{font-size:1.08rem;color:var(--muted);max-width:36ch;margin-bottom:2rem;}
+.transform-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:0 18px 40px -24px rgba(19,36,32,.35);}
+.form-mock{flex:1;display:flex;flex-direction:column;gap:.55rem;}
+.fline{height:8px;border-radius:2px;background:var(--paper-dim);}
+.fline.short{width:55%;}
+.flabel{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-top:.3rem;}
+.arrow{color:var(--rust);font-size:1.4rem;}
+.qr-mock{flex-shrink:0;width:104px;height:104px;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(7,1fr);gap:3px;}
+.qr-mock div{background:var(--ink);border-radius:1px;opacity:0;transform:scale(.4);animation:pop .35s ease forwards;}
+@keyframes pop{to{opacity:1;transform:scale(1);}}
+@media(prefers-reduced-motion:reduce){.qr-mock div{animation:none;opacity:1;transform:none;}.btn{transition:none;}}
+.caption{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.68rem;text-align:center;color:var(--muted);margin-top:.9rem;letter-spacing:.05em;}
+/* sections */
+.block{padding:3.5rem 0;}
+.section-head{max-width:46ch;margin-bottom:2.2rem;border-top:1px dashed var(--line);padding-top:1.6rem;}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-top:.5rem;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;text-decoration:none;}
+.card h3{font-size:1.08rem;font-weight:700;}
+.card p{font-size:.92rem;color:var(--muted);}
+.more{margin-top:1.8rem;}
+/* services page */
+.page-head{padding:3.5rem 0 1.5rem;max-width:60ch;}
+.page-head h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:.5rem 0 1rem;}
+.page-head p{color:var(--muted);margin-bottom:.8rem;}
+.svc{display:grid;grid-template-columns:.9fr 1.1fr;gap:2.4rem;padding:2.4rem 0;border-top:1px dashed var(--line);}
+@media(max-width:800px){.svc{grid-template-columns:1fr;gap:1.2rem;}}
+.svc h2{font-size:clamp(1.4rem,2.6vw,1.9rem);}
+.tag{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:600;color:var(--teal);margin-top:.6rem;}
+.svc p{margin-bottom:.9rem;max-width:62ch;}
+.svc .lbl{font-weight:600;margin-top:1rem;}
+.items{list-style:none;columns:2;column-gap:1.6rem;margin:.6rem 0 1rem;}
+@media(max-width:500px){.items{columns:1;}}
+.items li{padding:.28rem 0 .28rem 1rem;position:relative;font-size:.94rem;break-inside:avoid;}
+.items li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:6px;background:var(--gold);border-radius:1px;}
+.perfect{border-left:3px solid var(--teal);padding-left:.9rem;color:var(--muted);font-size:.94rem;}
+.perfect b{color:var(--ink);}
+/* enquiry + contact */
+.enquiry{background:var(--ink);color:var(--paper);border-radius:8px;padding:2.8rem 2.4rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2.4rem;align-items:center;}
+@media(max-width:800px){.enquiry{grid-template-columns:1fr;padding:2rem 1.4rem;}}
+.enquiry h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.8rem;}
+.enquiry p{color:#C9CFC5;margin-bottom:1.2rem;max-width:44ch;}
+.qr-slot{background:var(--card);color:var(--muted);border-radius:6px;aspect-ratio:1;max-width:240px;width:100%;margin:0 auto;display:grid;place-items:center;text-align:center;padding:1.2rem;font-size:.85rem;border:2px dashed var(--line);}
+.qr-slot svg{width:100%;height:100%;}
+.contact{background:var(--ink);color:var(--paper);border-radius:8px;padding:3rem 2.4rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;}
+.contact h2{font-size:clamp(1.6rem,3vw,2.2rem);}
+.contact p{color:#C9CFC5;max-width:34ch;margin-top:.6rem;}
+.contact-block{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+.contact-block .name{font-size:1.05rem;font-weight:600;}
+.contact-block .num{margin-bottom:.9rem;}
+footer{text-align:center;padding:2.2rem 6vw 5rem;margin-top:3rem;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.72rem;color:var(--muted);border-top:1px solid var(--line);}
+.grid.two{grid-template-columns:repeat(2,1fr);}
+@media(max-width:600px){.grid.two{grid-template-columns:1fr;}}
+.card .eyebrow{margin-bottom:.2rem;}
+.card h3 a{text-decoration:none;}
+.steps{margin:.8rem 0 0 1.2rem;max-width:56ch;}
+.steps li{padding:.3rem 0;}
+.prose p{max-width:62ch;margin-bottom:1rem;}
+.qr-slot.live{border:0;padding:.7rem;}
+.hero-art{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 18px 40px -24px rgba(19,36,32,.35);}
+</style></head><body>
+<header><a class="logo" href="index.html">REBAHUMI<span>.</span></a>
+<nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html" class="on">About</a><a href="contact.html">Contact</a></nav>
+<a class="pill" href="https://wa.me/27658048120?text=Hi%20Rebahumi%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp us</a></header>
+<div class="wrap"><div class="page-head"><p class="eyebrow">About</p>
+<h1>Practical digital solutions for growing businesses.</h1></div>
+<div class="prose">
+<p>Rebahumi helps small, growing and emerging businesses use technology to simplify their operations, improve how they present themselves and connect with their customers.</p>
+<p>We believe every business deserves access to practical digital solutions. Going digital doesn't need to be complicated, so we build things that fit the way your business actually works.</p>
+<p>We currently work around Kwa-Thema, Tsakane and Duduza.</p></div>
+<div class="block" style="padding-bottom:0"><div class="section-head"><p class="eyebrow">Why Rebahumi exists</p><h2>The informal sector shouldn't be left behind</h2></div>
+<div class="prose">
+<p>Rebahumi was started by Sinothando Mthingi, an aspiring economist. As the world moves towards being digital, it's important that the informal sector moves with it.</p>
+<p>Informal businesses make a big contribution to economic growth. But many of them work with limited technology, infrastructure and resources, which keeps productivity low.</p>
+<p>Rebahumi is our way of helping change that. We bring simple, practical digital tools to informal and small businesses, so they can work more efficiently, look professional and grow.</p></div></div>
+<div class="block"><div class="section-head"><p class="eyebrow">Who we work with</p><h2>Businesses at every stage</h2></div>
+<div class="prose"><p>Retailers, food businesses, beauty businesses, clothing businesses, service providers, crafters and other growing businesses, whether you are just starting out or growing your customer base.</p>
+<p>We also assist with business proposals for businesses that want to expand, apply for funding or partner with other businesses.</p>
+<p class="cta-row"><a class="btn btn-ghost" href="services.html">See our services</a><a class="btn btn-wa" href="https://wa.me/27658048120?text=Hi%20Rebahumi%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp us</a></p></div></div></div>
+<footer>REBAHUMI — DIGITAL BUSINESS SOLUTIONS</footer>
+<a class="wa-float" href="https://wa.me/27658048120?text=Hi%20Rebahumi%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4C9.4 4 4 9.3 4 15.8c0 2.2.6 4.2 1.7 6L4 28l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.6 0 12-5.3 12-11.9S22.600 4 16 4z" fill="#fff"/><path d="M12 10.500c.3-.6.6-.6 1-.6h.7c.2 0 .5 0 .7.6l.9 2.200c.1.200 0 .5-.1.700l-.6.800c-.2.200-.2.400 0 .700.6 1 1.500 1.900 2.700 2.500.3.200.5.100.7-.1l.8-1c.2-.2.400-.3.700-.2l2.100 1c.3.100.4.300.4.500 0 .6-.3 1.300-1 1.800-.7.500-1.600.7-2.600.4-3-.9-5.200-2.600-6.500-5.300-.5-1-.4-2.200.3-3.100z" fill="#1B7F4F"/></svg></a>
+</body></html>
